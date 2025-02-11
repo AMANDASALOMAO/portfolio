@@ -1,0 +1,18 @@
+.container {
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+@media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+    }
+  }
+  

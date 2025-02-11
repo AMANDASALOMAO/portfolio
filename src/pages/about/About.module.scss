@@ -1,0 +1,25 @@
+.text {
+    border-left: none;
+    border-radius: 0.5rem;
+    padding-right: 1rem;
+
+p {
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+}
+.memoji {
+    width: 300px;
+    margin:0;
+  }
+
+  @media (max-width: 768px) {
+    .memoji {
+        display: none;
+    }
+    .text p {
+        text-align: center;
+    }
+  }
+  

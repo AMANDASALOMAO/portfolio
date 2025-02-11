@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    //background-color: #1b0131;
+    //background-color: #170f1e;
+    background-color: #0a060c;
+    padding: 2rem;
+    box-sizing: border-box;
+    span {
+        //color:#edc359;
+        color: #72a117;
+        font-weight: 600;
+    }
+    h1 {
+        font-weight: 500;
+        margin: 0;
+        font-family: "Open Sans", serif;
+        font-optical-sizing: auto;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    button {
+        border-radius: 1.5rem;
+        padding: 0.725rem 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+      height: 100% !important;
+    }
+  }
+  

@@ -1,0 +1,39 @@
+.avatarContainer {
+  position: relative;
+
+  &.round {
+    border-radius: 50%;
+    width: fit-content;
+  }
+
+  &.border {
+    border: 2px solid #72a117;
+    padding: 4px;
+  }
+}
+
+.image {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.borderLabel {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  background: #0a060c;
+  background: linear-gradient(130deg, #0a060c00 50%, #0a060c 50%);  color: #E3646E !important;
+  font-weight: 900 !important;
+  padding: 6px 0 6px 6px;
+  border-radius: 4px;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .borderLabel {
+   display: none;
+  }
+}
