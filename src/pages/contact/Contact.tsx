@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Contact.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import Section from '../../components/section/Section';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Contact () {
 
@@ -28,7 +28,7 @@ const textToShare = encodeURIComponent(
       target="_blank" 
       rel="noreferrer"
       >
-      <FontAwesomeIcon icon={faMapMarkerAlt} color="#72a117" />
+      <FontAwesomeIcon icon={faMapMarkedAlt} color="#72a117" />
       <br/>
       Esplanada-BA
       </a>
