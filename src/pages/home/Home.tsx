@@ -7,11 +7,9 @@ import SkillsList from '../../components/skillsList/skillsList';
 
 function Home() {
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/cv/curriculo.pdf';
-    link.download = 'Amanda_Andrade_Argolo_CV.pdf';
-    link.click();
-  };
+    const url = 'portfolio/cv/curriculo.pdf';
+    window.open(url, '_blank');
+  }
 
   const handleContact = () => {
     const phoneNumber = '+5575981264552';

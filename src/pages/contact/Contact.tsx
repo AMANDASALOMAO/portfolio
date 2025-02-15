@@ -8,7 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Contact () {
 
-const textToShare = encodeURIComponent(
+const phoneNumber = '+5575981264552';
+const message = encodeURIComponent(
   'Olá! Gostaria de saber mais'
 );
 
@@ -33,7 +34,7 @@ const textToShare = encodeURIComponent(
       Esplanada-BA
       </a>
       
-      <a href={`https://wa.me/?text=${textToShare}`}
+      <a href={`https://wa.me/${phoneNumber}?text=${message}`}
       target="_blank" 
       rel="noreferrer"
       >
