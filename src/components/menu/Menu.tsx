@@ -17,8 +17,8 @@ const Menu: React.FC = () => {
       <ul className={styles.links}>
         <li><button onClick={() => handleScroll('home')}>Início</button></li>
         <li><button onClick={() => handleScroll('about')}>Sobre mim</button></li>
-        <li><button onClick={() => handleScroll('services')}>Serviços</button></li>
         <li><button onClick={() => handleScroll('work')}>Projetos</button></li>
+        <li><button onClick={() => handleScroll('services')}>Serviços</button></li>
         {/*<li><button onClick={() => handleScroll('skills')}>Skills</button></li>*/}
         <li><button onClick={() => handleScroll('contact')}>Contato</button></li>
       </ul>
