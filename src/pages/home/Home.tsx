@@ -7,7 +7,7 @@ import SkillsList from '../../components/skillsList/skillsList';
 
 function Home() {
   const handleDownload = () => {
-    const url = '/cv/curriculo.pdf';
+    const url = '/portfolio/cv/curriculo.pdf';
     window.open(url, '_blank');
   }
 
