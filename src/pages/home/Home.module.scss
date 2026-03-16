@@ -177,26 +177,53 @@
 }
 
 /* responsividade */
-
 @media (max-width: 768px) {
 
+  .container {
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .info {
+    width: 92%;
+    padding: 1rem 0;
+    gap: 0.6rem;
+  }
+
   .info h1 {
-    font-size: clamp(2rem, 8vw, 2.6rem);
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    margin-top: 0.8rem;
   }
 
   .info p {
     font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0.6rem;
   }
 
   .button {
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
+    max-width: 260px;
+    gap: 0.8rem;
+    margin-top: 1.6rem;
   }
 
   .download,
   .contact {
     width: 100%;
+    padding: 12px 18px;
+  }
+
+  .scrollIndicator {
+    bottom: 20px;
+  }
+
+  .glow {
+    width: 180px;
+    height: 180px;
+    filter: blur(35px);
   }
 
 }

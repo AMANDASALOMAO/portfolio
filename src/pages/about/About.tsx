@@ -15,7 +15,7 @@ const { ref, opacity, y } = useScrollReveal();
 
         <Section height={'60%'} flexDirection='row' className={styles.container}>
         <motion.img
-        ref={ref}
+       
         src={memoji}
         alt="memoji"
         className={styles.memoji}
@@ -23,6 +23,7 @@ const { ref, opacity, y } = useScrollReveal();
       />
 
       <motion.div
+        ref={ref}
         className={styles.text}
         style={{ opacity, y }}
       >
