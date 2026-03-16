@@ -1,54 +1,90 @@
 .description {
-    display: flex;
-    width: 60%;
-    justify-content: space-between;
-    text-align: center;
-    gap: 1rem;
-    padding: 2rem 0;
+  display: flex;
+  width: min(60%, 1100px);
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
 
-    div {
-    //max-width: 30%;
-    //background-color: #35164e;
-    //background-color: #1f1627;
-    //box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    text-align: start;
-    gap: 0.5rem;
-    padding: 1rem;
-    flex-direction: column;
-    border-radius: 0.5rem;
-    border: 1px solid #2a1f38;
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
-      }
-      span {
-         color: fff;
-         font-size: 0.6rem;
-         font-family: "Open Sans", serif !important;
-         white-space: nowrap;
-       }
-    }
-   
- }
- .container {
-   gap: 1rem;
-   text-align: center;
-   span {
-      color: #fff ;
-      font-family: "Courier Prime", serif !important;
-      font-weight: 500;
-    }
- }
- 
+/* ===== CARD ===== */
+
+.description > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  padding: 1.75rem;
+  border-radius: 1rem;
+
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(8px);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border 0.35s ease;
+}
+
+/* Hover sofisticado */
+
+.description > div:hover {
+  transform: translateY(-6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== TÍTULO DO CARD ===== */
+
+.description > div span {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ===== TEXTO ===== */
+
+.description > div p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ========================= */
+/* CONTAINER GERAL */
+/* ========================= */
+
+.container {
+  gap: 1rem;
+  text-align: center;
+}
+
+.container span {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
 @media (max-width: 768px) {
-   .description {
-     flex-direction: column;
-     div span {
-      white-space: break-spaces;
-     }
-   }
- }
- 
+  .description {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .description > div {
+    padding: 1.5rem;
+  }
+
+  .description > div span {
+    white-space: normal;
+  }
+}

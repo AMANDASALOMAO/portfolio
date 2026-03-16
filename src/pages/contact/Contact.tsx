@@ -5,6 +5,7 @@ import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import Section from '../../components/section/Section';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Reveal from '../../components/reveal/Reveal';
 
 function Contact () {
 
@@ -14,6 +15,7 @@ const message = encodeURIComponent(
 );
 
   return (
+    <Reveal>
     <Section height={'50%'} flexDirection={'column'}>
       <h1>Entre em <span>contato</span></h1>
       <div className={styles.details}>
@@ -40,10 +42,11 @@ const message = encodeURIComponent(
       >
       <FontAwesomeIcon icon={faMobileAlt} color="#72a117" />
       <br/>
-      (75) 98126-4552
+      (75) 98176-4705
       </a>
       </div>
     </Section>
+    </Reveal>
   );
 }
 

@@ -3,9 +3,11 @@ import styles from './Services.module.scss'
 import Section from '../../components/section/Section';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faPalette, faWrench } from '@fortawesome/free-solid-svg-icons';
+import Reveal from '../../components/reveal/Reveal';
 
 function Services () {
   return (
+    <Reveal>
     <Section height={'100%'} flexDirection={'column'} className={styles.container}>
       <h1 style={{'color': '#72a117'}}>Serviços</h1>
       <span>Como posso ajudar o seu negócio</span>
@@ -47,6 +49,7 @@ function Services () {
       </div>
       </div>
     </Section>
+    </Reveal>
   );
 }
 

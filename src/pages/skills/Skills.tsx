@@ -7,9 +7,11 @@ import js from './../../assets/js.png'
 import ts from './../../assets/ts.png'
 import sass from './../../assets/sass.png'
 import styles from './Skills.module.scss'
+import Reveal from '../../components/reveal/Reveal';
 
 function Services () {
   return (
+    <Reveal>
     <Section height={'100%'} flexDirection={'column'}>
       <h1 style={{'color': '#72a117'}}>Skills</h1>
       <div className={styles.container}>
@@ -58,6 +60,7 @@ function Services () {
         </div>      
       </div>
     </Section>
+    </Reveal>
   );
 }
 

@@ -2,27 +2,46 @@ import React from 'react';
 import styles from './About.module.scss';
 import Section from '../../components/section/Section';
 import memoji from './../../assets/memoji.png';
+import { useScrollReveal } from '../../animations/useScroll';
+import { motion } from 'framer-motion';
+
+
 
 function About() {
+
+const { ref, opacity, y } = useScrollReveal();
+
   return (
+
         <Section height={'60%'} flexDirection='row' className={styles.container}>
-            <img src={memoji} alt={'memoji'} className={styles.memoji} />
-          <div className={styles.text}>
+        <motion.img
+        ref={ref}
+        src={memoji}
+        alt="memoji"
+        className={styles.memoji}
+        style={{ opacity, y }}
+      />
+
+      <motion.div
+        className={styles.text}
+        style={{ opacity, y }}
+      >
           <h1>Sobre <span>mim</span></h1>
           <p>
-            Sou estudante de Engenharia de Software e me interesso por tudo 
-            que envolve tecnologia e desenvolvimento. Durante essa jornada, mergulhei 
-            em várias linguagens e frameworks, como HTML, CSS, JavaScript, TypeScript 
-            e Java. Tive a oportunidade de trabalhar com React, Next e Angular, criando 
-            aplicações web que são tanto funcionais quanto atrativas. As minhas habilidades 
-            em versionamento de código e testes com Jest foram aprimoradas em experiências 
-            profissionais, o que me ajuda a garantir a qualidade e a eficiência dos meus projetos.
-            <br />
-            Além da experiência prática, busquei aprofundar meu conhecimento por meio de cursos.
-            Concluí um curso de Java, um de desenvolvimento frontend com Angular e outro 
-            de desenvolvimento web, totalizando mais de 230 horas de aprendizado.
+           Desde agosto de 2025, atuo como Tutora de Python na Kodland, uma plataforma internacional de educação online, 
+           onde ensino programação e lógica para crianças e adolescentes ao redor do mundo, desenvolvendo não apenas habilidades 
+           técnicas, mas também raciocínio lógico e autonomia digital nos alunos.
           </p>
-          </div>
+          <p>
+           Sou Desenvolvedora de Software com experiência em sistemas de CRM, landing pages e projetos baseados em componentes (Storybook), 
+           utilizando React, Next.js, Angular e Python em contextos profissionais na i-Value Tecnologia (kenlo.com.br) e na Kiitos. 
+           Tenho experiência com HTML, CSS, JavaScript, TypeScript e Java, além de versionamento de código e desenvolvimento de testes unitários com Jest.
+          </p>  
+          <p>
+           Possuo certificações em Java (Spring Boot, Java EE, Hibernate, POO), Desenvolvimento Web e Front-End com Angular, 
+           e estou constantemente aprimorando minhas habilidades técnicas, com foco em desenvolvimento escalável, boas práticas e entrega de soluções eficientes.
+          </p>
+          </motion.div>
          
         </Section>
   );

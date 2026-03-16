@@ -6,10 +6,19 @@ import ds from './../../assets/ds.png';
 import gt from './../../assets/agenciamk.png';
 import sistema from './../../assets/sistema.png';
 
-function Contact () {
+import Reveal from '../../components/reveal/Reveal';
+import { motion } from 'framer-motion';
+import { useScrollReveal } from '../../animations/useScroll';
 
+function Contact () {
+const { ref, opacity, y } = useScrollReveal();
   return (
+    
     <Section height={'70%'} flexDirection={'column'} className={styles.container}>
+      <motion.div
+        className={styles.text}
+        style={{ opacity, y }}
+      >
     <h3>Meu trabalho</h3>
     <span>Veja projetos em destaque</span>
     <div className={styles.cards}>
@@ -30,7 +39,9 @@ function Contact () {
     description="Interface intuitiva e eficiente para o controle de clientes e roteadores, otimizando o processo e melhorando a organização dos dados."
   />
     </div>
+    </motion.div>
     </Section>
+   
   );
 }
 

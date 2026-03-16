@@ -1,12 +1,13 @@
 .container {
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: nowrap; 
     display: flex;
     max-height: min-content;
     overflow: hidden;
+    gap: 1rem;
+    padding: 1rem;
 p {
     font-size: 0.5rem;
-    font-family: "Open Sans", serif;
 }
 }
 .skills {

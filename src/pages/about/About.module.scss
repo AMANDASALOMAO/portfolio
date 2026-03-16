@@ -1,25 +1,58 @@
 .text {
-    border-left: none;
-    border-radius: 0.5rem;
-    padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
 
-p {
+  max-width: 70%;
+
+  p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
     text-align: justify;
-    font-size: 0.9rem;
-    line-height: 1.2rem;
+    letter-spacing: -0.01em;
+  }
 }
-}
+
+/* ========================= */
+/* MEMOJI */
+/* ========================= */
+
 .memoji {
-    width: 300px;
-    margin:0;
+  width: 280px;
+  max-width: 100%;
+  margin: 0;
+  opacity: 0.9;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.memoji:hover {
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .memoji {
+    display: none;
   }
 
-  @media (max-width: 768px) {
-    .memoji {
-        display: none;
-    }
-    .text p {
-        text-align: center;
-    }
+  .text {
+    border-left: none;
+    padding-left: 0;
   }
-  
+
+  .text p {
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .text {
+  max-width: 100%;
+
+}
+}
