@@ -1,14 +1,21 @@
 .container {
     gap: 1rem;
-    padding: 1rem;
     text-align: center;
-}
+    
+    span {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+    h1 {
+         margin: 0 0 1rem 0;
+    }
 
+}
 .cards {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    padding: 0 1rem;
+    padding:1rem;
 }
 @media (max-width: 768px) {
     .cards {

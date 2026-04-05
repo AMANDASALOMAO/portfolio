@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './About.module.scss';
 import Section from '../../components/section/Section';
 import memoji from './../../assets/memoji.png';
 import { useScrollReveal } from '../../animations/useScroll';
 import { motion } from 'framer-motion';
+import { useEyes } from '../../hooks/useEyes';
 
 
 
 function About() {
 
 const { ref, opacity, y } = useScrollReveal();
+const containerRef = useRef<HTMLDivElement>(null);
+
+  useEyes({
+    containerRef,
+    radiusX: 25,
+    radiusY: 18,
+    ease: 0.1,
+  });
 
   return (
 
         <Section height={'60%'} flexDirection='row' className={styles.container}>
-        <motion.img
+{/*      <div ref={containerRef} className="eyes-container">
+      <div className="eye">
+        <div className="pupil">
+          <div className="gloss" />
+        </div>
+      </div>
+
+      <div className="eye">
+        <div className="pupil">
+          <div className="gloss" />
+        </div>
+      </div>
+    </div>*/}
+
+      <motion.img
        
         src={memoji}
         alt="memoji"

@@ -8,8 +8,8 @@ export function useScrollReveal() {
     target: ref,
     offset: ["start 80%", "end 20%"],
   });
+  const opacity = useTransform(scrollYProgress, [0.85, 1], [1, 0]);
 
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
   const y = useTransform(scrollYProgress, [0, 1], [60, 0]);
 
   return { ref, opacity, y };

@@ -10,16 +10,16 @@ import Reveal from '../../components/reveal/Reveal';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../../animations/useScroll';
 
-function Contact () {
+function Work () {
 const { ref, opacity, y } = useScrollReveal();
   return (
     
-    <Section height={'70%'} flexDirection={'column'} className={styles.container}>
+    <Section height={'100%'} flexDirection={'column'} className={styles.container}>
       <motion.div
         className={styles.text}
         style={{ opacity, y }}
       >
-    <h3>Meu trabalho</h3>
+    <h1  style={{'color': '#72a117'}}>Meu trabalho</h1>
     <span>Veja projetos em destaque</span>
     <div className={styles.cards}>
       <Card
@@ -45,4 +45,4 @@ const { ref, opacity, y } = useScrollReveal();
   );
 }
 
-export default Contact;
+export default Work;
