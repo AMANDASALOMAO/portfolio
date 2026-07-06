@@ -35,7 +35,7 @@ const containerRef = useRef<HTMLDivElement>(null);
           <div className="gloss" />
         </div>
       </div>
-    </div>*/}
+    </div>
 
       <motion.img
        
@@ -43,7 +43,7 @@ const containerRef = useRef<HTMLDivElement>(null);
         alt="memoji"
         className={styles.memoji}
         style={{ opacity, y }}
-      />
+      />*/}
 
       <motion.div
         ref={ref}

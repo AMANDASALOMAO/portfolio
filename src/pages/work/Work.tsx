@@ -5,7 +5,7 @@ import { Card } from '../../components/card/Card';
 import ds from './../../assets/ds.png';
 import gt from './../../assets/agenciamk.png';
 import sistema from './../../assets/sistema.png';
-
+import portfolio from './../../assets/portfolio.png';
 import Reveal from '../../components/reveal/Reveal';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '../../animations/useScroll';
@@ -32,12 +32,20 @@ const { ref, opacity, y } = useScrollReveal();
       image={ds}
       title="Design System"
       description="Biblioteca interativa que documenta e exibe os componentes de forma organizada e acessível."
-    /><Card 
+    />
+      <Card 
+    link={'https://github.com/AMANDASALOMAO/portfolio'}
+    image={portfolio}
+    title="Portfolio pessoal"
+    description="Plataforma desenvolvida para destacar projetos, competências e trajetória profissional, proporcionando uma experiência visual moderna e organizada."
+    />
+    <Card 
     link={'https://github.com/AMANDASALOMAO/clientdata'}
     image={sistema}
     title="Sistema de cadastro de usuários e roteadores"
     description="Interface intuitiva e eficiente para o controle de clientes e roteadores, otimizando o processo e melhorando a organização dos dados."
-  />
+    />
+
     </div>
     </motion.div>
     </Section>

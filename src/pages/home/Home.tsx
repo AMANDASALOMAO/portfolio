@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./Home.module.scss";
 import Section from "../../components/section/Section";
 import { Avatar } from "../../components/avatar/Avatar";
-import profile from "./../../assets/profile.svg";
+import avatar from "./../../assets/avatar.png";
 import SkillsList from "../../components/skillsList/skillsList";
 import { motion, Variants } from "framer-motion";
+import OrbitAvatar from "../../components/orbitAvatar/OrbitAvatar";
 
 function Home() {
 
@@ -81,20 +82,8 @@ function Home() {
         whileInView="show"
         viewport={{ amount: 0.4 }}
       >
-
-        {/* Avatar */}
-        <motion.div variants={fadeUp} className={styles.avatarWrapper}>
-          <div className={styles.glow}></div>
-          
-          <Avatar
-            src={profile}
-            alt="profile"
-            isRound
-            withBorder
-          />
-        </motion.div>
-          
-        {/* Headline */}
+      <motion.div variants={fadeUp} className={styles.right}>
+                {/* Headline */}
         <motion.h1 variants={fadeUp}>
           Olá, eu sou Amanda
         </motion.h1>
@@ -128,11 +117,15 @@ function Home() {
           </motion.button>
         </motion.div>
 
-        {/* Skills */}
+      {/*  Skills 
         <motion.div variants={fadeUp}>
           <SkillsList />
         </motion.div>
-
+      */}
+      </motion.div>
+      <motion.div className={styles.left} variants={fadeUp} >
+        <OrbitAvatar />
+      </motion.div>
       </motion.div>
     </Section>
   );
