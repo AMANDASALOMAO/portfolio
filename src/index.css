@@ -94,7 +94,10 @@ small {
   font-size: var(--fs-xs);
   color: var(--text-muted);
 }
-
+span {
+  color: var(--text-primary);
+  font-weight: 600;
+}
 /* =========================
    LINKS
 ========================= */

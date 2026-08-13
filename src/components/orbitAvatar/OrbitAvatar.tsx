@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import styles from "./OrbitAvatar.module.scss";
-import avatar from "../../assets/avatar.png";
 import { useEffect, useState } from "react";
+
+import styles from "./OrbitAvatar.module.scss";
+
+import avatar from "../../assets/avatar.png";
 import html from "../../assets/html.png";
 import css from "../../assets/css.png";
 import js from "../../assets/js.png";
@@ -18,45 +20,59 @@ const skills = [
   ts,
 ];
 
-const radius = 200;
-
 export default function OrbitAvatar() {
-    const [radius, setRadius] = useState(240);
+  const [radius, setRadius] = useState(220);
 
   useEffect(() => {
-
     const handleResize = () => {
       if (window.innerWidth <= 768) {
+        setRadius(150);
+      } else if (window.innerWidth <= 1000) {
         setRadius(180);
       } else {
-        setRadius(240);
+        setRadius(220);
       }
     };
 
-    handleResize(); // executa ao carregar
+    handleResize();
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener(
+      "resize",
+      handleResize
+    );
 
-    return () => window.removeEventListener("resize", handleResize);
-
+    return () => {
+      window.removeEventListener(
+        "resize",
+        handleResize
+      );
+    };
   }, []);
+
   return (
     <div className={styles.container}>
+
+      {/* Glow */}
+
       <div className={styles.glow} />
+
+      {/* Avatar */}
 
       <motion.img
         src={avatar}
-        alt="Avatar"
+        alt="Amanda"
         className={styles.avatar}
         animate={{
-          y: [0, -8, 0],
+          y: [0, -6, 0],
         }}
         transition={{
-          duration: 4,
+          duration: 5,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       />
+
+      {/* Órbita */}
 
       <motion.div
         className={styles.orbit}
@@ -64,33 +80,29 @@ export default function OrbitAvatar() {
           rotate: 360,
         }}
         transition={{
-          duration: 28,
-          ease: "linear",
+          duration: 32,
           repeat: Infinity,
+          ease: "linear",
         }}
       >
         {skills.map((icon, index) => {
-          const angle = (360 / skills.length) * index;
+          const angle =
+            (360 / skills.length) * index;
 
           return (
             <div
               key={index}
               className={styles.icon}
               style={{
-                transform: `rotate(${angle}deg) translateY(-${radius}px)`,
+                transform: `
+                  rotate(${angle}deg)
+                  translateY(-${radius}px)
+                `,
               }}
             >
-              <motion.img
+              <img
                 src={icon}
                 alt=""
-                animate={{
-                  rotate: -360,
-                }}
-                transition={{
-                  duration: 28,
-                  ease: "linear",
-                  repeat: Infinity,
-                }}
               />
             </div>
           );
