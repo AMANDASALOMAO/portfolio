@@ -5,6 +5,7 @@ import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Home from './pages/home/Home';
 import Services from './pages/services/Services';
+// @ts-ignore: allow side-effect CSS import without type declarations
 import './App.css';
 import Work from './pages/work/Work';
 
