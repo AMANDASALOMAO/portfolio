@@ -62,7 +62,7 @@ const containerRef = useRef<HTMLDivElement>(null);
            Tenho experiência com HTML, CSS, JavaScript, TypeScript e Java, além de versionamento de código e desenvolvimento de testes unitários com Jest.
           </p>  
           <p>
-           Possuo certificações em Java (Spring Boot, Java EE, Hibernate, POO), Desenvolvimento Web e Front-End com Angular, 
+           Possuo certificações em Java (Spring Boot, Java EE, Hibernate, POO), Desenvolvimento Web e Full Stack com Angular, 
            e estou constantemente aprimorando minhas habilidades técnicas, com foco em desenvolvimento escalável, boas práticas e entrega de soluções eficientes.
           </p>
           </motion.div>

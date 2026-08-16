@@ -35,7 +35,7 @@ Entre os destaques estão:
 
 ## 🚀 Tecnologias
 
-### Front-end
+### Full Stack
 
 * React
 * TypeScript
