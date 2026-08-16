@@ -66,9 +66,13 @@ function Work() {
         <span>Veja projetos em destaque</span>
 
         <div className={styles.carousel}>
+
+          {/* DESKTOP */}
           <motion.div
-            className={styles.cards}
-            animate={{ x: ['0%', '-50%'] }}
+            className={`${styles.cards} ${styles.desktopCards}`}
+            animate={{
+              x: ['0%', '-50%'],
+            }}
             transition={{
               x: {
                 repeat: Infinity,
@@ -78,10 +82,9 @@ function Work() {
               },
             }}
           >
-            {/* Primeira sequência */}
             {cards.map((card, index) => (
               <Card
-                key={`card-${index}`}
+                key={`desktop-${index}`}
                 link={card.link}
                 image={card.image}
                 title={card.title}
@@ -89,10 +92,9 @@ function Work() {
               />
             ))}
 
-            {/* Segunda sequência - cópia para criar o loop */}
             {cards.map((card, index) => (
               <Card
-                key={`card-copy-${index}`}
+                key={`desktop-copy-${index}`}
                 link={card.link}
                 image={card.image}
                 title={card.title}
@@ -100,6 +102,24 @@ function Work() {
               />
             ))}
           </motion.div>
+
+          {/* MOBILE */}
+          <div className={styles.mobileCards}>
+            {cards.map((card, index) => (
+              <Card
+                key={`mobile-${index}`}
+                link={card.link}
+                image={card.image}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </div>
+
+          <div className={styles.swipeIndicator}>
+            Deslize para ver mais <span className={styles.arrow}>→</span>
+          </div>
+
         </div>
       </motion.div>
     </Section>

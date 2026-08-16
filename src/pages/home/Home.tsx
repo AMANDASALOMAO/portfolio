@@ -80,7 +80,7 @@ function Home() {
               className={styles.eyebrow}
               variants={fadeUp}
             >
-              DESENVOLVEDORA FRONT-END
+              DESENVOLVEDORA FULL STACK
             </motion.span>
 
             <motion.h1 variants={fadeUp}>

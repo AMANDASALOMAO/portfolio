@@ -24,12 +24,87 @@
 .cards {
   display: flex;
   flex-wrap: nowrap;
-  gap: 24px;
+  gap: 1.5rem;
   width: max-content;
 }
-@media (max-width: 768px) {
-    .cards {
-      flex-direction: column;
+
+.desktopCards {
+  display: flex;
+}
+
+.mobileCards {
+  display: none;
+}
+.swipeIndicator {
+  display:none;
+}
+
+@media (max-width: 48rem) {
+
+  // Esconde o carrossel automático
+  .desktopCards {
+    display: none;
+  }
+  .swipeIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    color: #c3b9d5;
+    opacity: 0.8;
+    white-space: nowrap;
+  }
+
+  .arrow {
+    display: inline-block;
+    font-size: 1.1rem;
+    animation: swipeArrow 1.5s ease-in-out infinite;
+  }
+  // Carrossel manual
+  .mobileCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    gap: 1rem;
+
+    width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0 1rem 1rem;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > * {
+      flex: 0 0 80vw;
+      max-width: none;
+
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
     }
   }
-  
+}
+
+@keyframes swipeArrow {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(0.4rem);
+  }
+}
