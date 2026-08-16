@@ -15,6 +15,20 @@ function Work() {
 
   const cards = [
     {
+      link: 'https://github.com/AMANDASALOMAO/newsiq',
+      image: newsiq,
+      title: 'Plataforma inteligente de notícias',
+      description:
+        'Plataforma desenvolvida para centralizar, organizar e explorar notícias, utilizando inteligência artificial para gerar resumos, contexto e análises que facilitam o acesso e a compreensão das informações.',
+    },
+    {
+      link: 'https://github.com/AMANDASALOMAO/clientdata',
+      image: sistema,
+      title: 'Sistema de cadastro de usuários e roteadores',
+      description:
+        'Interface intuitiva e eficiente para o controle de clientes e roteadores, otimizando o processo e melhorando a organização dos dados.',
+    },
+    {
       link: 'https://github.com/AMANDASALOMAO/growth-tag',
       image: gt,
       title: 'Página de agência de marketing',
@@ -35,20 +49,7 @@ function Work() {
       description:
         'Plataforma desenvolvida para destacar projetos, competências e trajetória profissional, proporcionando uma experiência visual moderna e organizada.',
     },
-    {
-      link: 'https://github.com/AMANDASALOMAO/clientdata',
-      image: sistema,
-      title: 'Sistema de cadastro de usuários e roteadores',
-      description:
-        'Interface intuitiva e eficiente para o controle de clientes e roteadores, otimizando o processo e melhorando a organização dos dados.',
-    },
-    {
-      link: 'https://github.com/AMANDASALOMAO/newsiq',
-      image: newsiq,
-      title: 'Plataforma inteligente de notícias',
-      description:
-        'Plataforma desenvolvida para centralizar, organizar e explorar notícias, utilizando inteligência artificial para gerar resumos, contexto e análises que facilitam o acesso e a compreensão das informações.',
-    },
+
   ];
 
   return (
